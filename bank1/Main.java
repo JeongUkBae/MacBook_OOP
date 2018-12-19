@@ -30,9 +30,13 @@ public class Main {
 					JOptionPane.showMessageDialog(null, info);
 					break;
 				case "3" :
-					String gan = account.generatorAccountNum();
-					JOptionPane.showMessageDialog(null,String.format("계좌가 신규개설 되었습니다.",gan));
+					account = new Account(0);
+					String gan = account.accountNum;
+					JOptionPane.showMessageDialog(null,gan);
+					break;
+				case "4" :
 					
+					break;
 			}
 		}//while
 		

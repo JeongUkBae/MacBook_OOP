@@ -11,7 +11,7 @@ public class Member {
 	}
 	
 	public String info() {
-		return String.format("[회원정보] %s\n"
+		return String.format("[%s] 회원정보\n"
 				+ "이름 : %s\n"
 				+ "ID : %s\n"
 				+ "주민번호 : %s\n"

@@ -18,25 +18,32 @@ import java.util.Random;
  *  5. accNuminfo() 계좌정보
  * */
 public class Account {
+	final static String BANK_NAME = "국민은행";
 	String accountNum, today;
 	int money;
 	Account(int money) {
 		this.money = money;
 		this.accountNum = this.generatorAccountNum();
 	}
+	/**
+	 * 계좌생성
+	 * */
 	public String generatorAccountNum() {
 		String accuontNum = "";
 		Random random = new Random();
 		for(int i=0;i<14; i++) {
-			if(i==3) {
+			if(i==4) {
 				accuontNum += random.nextInt(10)+"-";
-			} else if(i==5) {
+			} else if(i==6) {
 				accuontNum += random.nextInt(10)+"-";
 			} else {
 				accuontNum += random.nextInt(10);
 			}
 		}
-		return accuontNum;
+		return String.format("[%s] 계좌가 개설 되었습니다. \n계좌번호 : %s"
+				,BANK_NAME, accuontNum);
 	}
+	
+	
 	
 }//field
