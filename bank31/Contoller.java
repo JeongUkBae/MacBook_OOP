@@ -25,12 +25,14 @@ public class Contoller {
 				JOptionPane.showMessageDialog(null,memberBean.toString());
 				break;
 			case "3" :
-				accountBean = accountService.generatorAccountNum();
-				JOptionPane.showMessageDialog(null,accountBean.toString());
-				
+			//	accountBean = accountService.withdraw(Integer.parseInt(inMoney));
+				accountBean = accountService.inMoney(
+						Integer.parseInt(JOptionPane.showInputDialog("금액을 입력하세요.")));
+				JOptionPane.showMessageDialog(null,String.format(
+						accountBean.toString()));
 				break;
 			case "4" :
-				
+				JOptionPane.showMessageDialog(null,accountService.toString());
 				break;
 			}
 		}//while
